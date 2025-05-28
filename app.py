@@ -71,11 +71,11 @@ if rainfall_df_full is not None:
         min_value=1, max_value=10, value=3,
         help="How many years into the future to predict total monsoon rainfall."
     )
-    n_lags_input = 3
+    n_lags_input = 1
     if selected_model_type == "Random Forest":
         n_lags_input = st.sidebar.slider(
             "Past Years (Lags) for RF Prediction:",
-            min_value=1, max_value=10, value=3,
+            min_value=1, max_value=10, value=1,
             help="For Random Forest: number of previous years' rainfall to use as predictors."
         )
 
@@ -258,7 +258,7 @@ if rainfall_df_full is not None:
             ---
             #### **Purpose & Linkage to ISRO Project**
             This tool serves as a practical demonstration aligned with the objectives of the ISRO RESPOND project titled: 
-            
+
             *"Advances in Numerical Weather Prediction (NWP) Modelling using AI/ML Techniques"*. 
             It showcases how AI/ML and statistical models can enhance weather parameter prediction.
             ---
